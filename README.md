@@ -72,10 +72,10 @@ This metric is particularly useful for triggering alerts based on relative timer
   annotations:
     summary: "Certificate {{ $labels.path }} has less than 50% of its lifetime remaining"
 
-- alert: Certificate80PercentLifetimeReached
+- alert: Certificate80PercentConsumed
   expr: ssl_certificate_expiry_ratio < 0.2
   annotations:
-    summary: "Certificate {{ $labels.path }} has consumed 80% of its lifetime"
+    summary: "Certificate {{ $labels.path }} has consumed 80% of its lifetime (20% remaining)"
 ```
 
 # Contribute
